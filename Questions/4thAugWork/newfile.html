@@ -6,6 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    ee
+  <div Id="box"></div>
+    <button onclick="buttonclick()">click me</button>
+
+    <script>
+        let box = document.getElementById("box")
+        let click = document.getElementById("click")
+        let arr = ["please click","click kar do yr", "ab click kar do", "mat kar bhad me ja"]
+       var t;
+    function displaymsg(msg,time){
+    t = setTimeout(() => {
+    box.innerText = msg
+   }, time);
+    }
+  let delay = 1000; 
+    for (let i = 0; i <= arr.length; i++) {
+      displaymsg(arr[i], delay);
+      delay += 2000; 
+    }
+    function buttonclick(){
+        clearTimeout(t)
+        box.innerText = "thank You"
+    }
+ 
+    </script>
 </body>
 </html>
